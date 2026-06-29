@@ -1,0 +1,1 @@
+**`recent_files`** 是 memory 里记录当前任务最近接触过哪些文件的列表。每次 `read_file`、`write_file`、`patch_file` 之后，操作的路径会被追加到这个列表末尾。`WORKING_FILE_LIMIT = 8` 就是**这个列表最多保留 8 条路径**，超过的话最旧的会被挤掉。作用是模型下一轮不靠猜也知道刚碰过哪些文件。

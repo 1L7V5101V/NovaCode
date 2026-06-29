@@ -1,0 +1,1 @@
+**`file_summaries`** 是一个 dict，key 是文件路径，value 是"该文件前三行的短摘要 + 创建时的 SHA256 freshness"。但渲染到 prompt 里的 memory section 时，不会把所有文件的摘要都展示出来——只展示当前 `recent_files` 里前 6 个且 freshness 仍然有效的摘要。`FILE_SUMMARY_LIMIT = 6` 就是**这个展示上限**。因为记忆文本本身也有预算控制，不需要也没必要把几十个文件的摘要全部列给模型。

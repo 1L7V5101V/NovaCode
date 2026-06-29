@@ -1,0 +1,1 @@
+**`episodic_notes`** 是一个列表，存的是跨轮值得携带的短文本笔记。比如读文件后存一句文件摘要，或者工具执行异常后记一条 process note。`EPISODIC_NOTE_LIMIT = 12` 是**这个列表最多保留 12 条**，超过时最旧的被移除。限制的原因是这些 notes 最终会被召回并渲染进 relevant_memory section，预算只有 1200 字符，留太多也带不进去。
